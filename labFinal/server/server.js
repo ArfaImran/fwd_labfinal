@@ -8,7 +8,7 @@ const PORT = 8080
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://233604_db_user:yourpass@cluster0.049ygsi.mongodb.net/?appName=Cluster0', {
+mongoose.connect('mongodb+srv://233596_db_user:yourpass@cluster0.049ygsi.mongodb.net/?appName=Cluster0', {
 }).then(() => console.log('MongoDB connected')).catch(err => console.error(err))
 
 const workoutSchema = new mongoose.Schema({
@@ -58,6 +58,7 @@ app.delete('/api/workouts/:id', async (req, res) => {
 })
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+
 
 
 
